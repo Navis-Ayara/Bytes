@@ -1,11 +1,20 @@
 {% extends 'base.html' %}
 <link rel="stylesheet" href="{{ url_for('static', filename='styles/register.css') }}">
 {% block body %}
-    <form action="/login" method="post">
-        <div class="fields">
-            <input type="text" name="name" placeholder="Name" class="name-field">
-            <input type="password" name="password" placeholder="Create a strong password" class="password-field">   
-        </div>
-        <button type="submit" class="login-btn">Login</button>
-    </form>
+    <div class="card-wrapper">
+        <div class="card">
+            <h1 class="center">Register</h1>
+            <form name="register_form"></form>
+
+                <label for="name">Name</label>
+                <input type="text" name="name" class="field" required>
+
+                <label for="password">Password</label>
+                <input type="password" name="password" class="field" required>
+                
+                
+                <p class="error" error--hidden></p>
+
+                
+                <input type="submit" value="Register" class="button">
 {% endblock body %}

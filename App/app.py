@@ -1,7 +1,11 @@
 from flask import Flask, render_template, request, redirect, url_for
-
-
+import pymongo
+from user import routes
 app = Flask(__name__)
+
+client = pymongo.MongoClient('localhost', 27017)
+db = client.user_login_system
+
 
 
 @app.route('/')
@@ -14,10 +18,6 @@ def Welcome():
 
 @app.route('/login')
 def login():
-    return render_template("login.html")
-
-@app.route('/register')
-def register():
     return render_template("register.html")
 
 if __name__ == '__main__':
