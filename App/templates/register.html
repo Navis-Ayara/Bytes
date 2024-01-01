@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/register.css') }}">
+{% block body %}
+    <form action="/login" method="post">
+        <div class="fields">
+            <input type="text" name="name" placeholder="Name" class="name-field">
+            <input type="password" name="password" placeholder="Create a strong password" class="password-field">   
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+    </form>
+{% endblock body %}

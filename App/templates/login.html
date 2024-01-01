@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <form action="/login" method="post">
+        <input type="text" name="name">
+        <input type="text" name>
+    </form>
+    <a href="{{ url_for('register') }}">Login</a><br>
+{% endblock body %}
