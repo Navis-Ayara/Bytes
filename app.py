@@ -23,10 +23,12 @@ def home():
 
 @app.route('/home')
 def home():
-    return render_template('home.html')
+    user = get_current_user()
+    return render_template('home.html', user=user)
 
 @app.route('/login',methods=['GET', 'POST'])
 def login():
+    user = get_current_user()
     error = None
     if request.method == 'POST':
         # get form data
@@ -42,12 +44,13 @@ def login():
                 return redirect(url_for('home'))
             else:
                 error = 'Invalid username or password'
-    return render_template('login.html', loginerror=error)
+    return render_template('login.html', loginerror=error, user=user)
        
 
 
 @app.route('/register',methods=['GET', 'POST'])
 def register():
+    user = get_current_user()
     register_error = None
     if request.method == 'POST':
         # get form data
@@ -69,7 +72,7 @@ def register():
         db.commit()
         return redirect(url_for('login'))
 
-    return render_template('register.html', register_error=register_error)
+    return render_template('register.html', register_error=register_error, user=user)
 
 
 @app.route('/logout')
