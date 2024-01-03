@@ -1,12 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME PAGE</title>
-    <h1>Hello world</h1>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+<h1>Post</h1>
+
+ {% for post in object_list %}
+
+    <li><a href="{% url 'article-details' post.pk %}"><b>{{post.title }}</b></a><br/> - {{ post.author }}<br/>
+        {{post.date_posted }}
+        {{post.author.first_name }}  -{{ post.author.last_name }}<br/>
+    {{ post.body }}</li>
     
-</body>
-</html>
+
+ {% endfor %}
+
+
+
+
+
+
+{% endblock %}
