@@ -1,15 +1,51 @@
 {% extends 'base.html' %}
+{% block style %}
+<style>
+    body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+    }
+    div {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    article {
+        width: 600px;
+        height: 450px;
+        padding: 10px;
+        background-color: rgb(219, 219, 219);
+        border-radius: 15px;
+    }
+    h1 {
+        font-size: large;
+        font-weight: bold;
+    }
+    p {
+        padding-top: 10px;
+    }
+</style>
+{% endblock style %}
 {% block content %}
 
+<article>
+    <h1>{{post.title}}</h1>
 
-<h1>{{post.title}}</h1>
-
-<small>By: {{post.author}} on {{post.date_posted}}</small><br/>
-<hr>
-<p>{{post.body}}</p>
+    <small>By: {{post.author}} on {{post.date_posted}}</small><br/>
+    <hr>
+    <p>{{post.body}}</p>
 
 
-<br/><br/>
+    <br/><br/>
+</article>
+
 <a href="{% url 'home' %}">Go Back</a>
 
 

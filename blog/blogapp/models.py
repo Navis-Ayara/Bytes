@@ -9,6 +9,8 @@ class Post(models.Model):
     body = models.TextField()
     date_posted = models.DateTimeField(auto_now_add=True)
     
+    class Meta:
+        ordering = ("title",)
 
-def __str__(self):
-    return self.title + ' | ' + str(self.author)
+    def __str__(self):
+        return self.title + ' | ' + str(self.author)

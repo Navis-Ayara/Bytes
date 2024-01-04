@@ -1,19 +1,23 @@
 {% extends 'base.html' %}
+<link rel="stylesheet" href="https://cdn.tailwindcss.com"">
 {% block content %}
 
 
 
-<h1>Post</h1>
+<h1 class="p-5 font-large text-xl bold bg-white" style="width: 100%;">Posts</h1>
+
+<ul role="list" class="divide-y divide-gray-100">
 
  {% for post in object_list %}
-
-    <li><a href="{% url 'article-details' post.pk %}"><b>{{post.title }}</b></a><br/> - {{ post.author }}<br/>
+    <li class="flex justify-between gap-x-6 py-5">
+        <a href="{% url 'article-details' post.pk %}"><b>{{post.title }}</b></a> - {{ post.author }}
         {{post.date_posted }}
         {{post.author.first_name }}  -{{ post.author.last_name }}<br/>
-    {{ post.body }}</li>
-    
-
+        {{ post.body }}
+    </li>
  {% endfor %}
+
+</ul>
 
 
 
