@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+<link rel="stylesheet" href="https://cdn.tailwindcss.com">
+{% block title %} Create a Fresh Post {% endblock %}
+{% block content %}
+
+
+
+
+<h1 class="p-5 font-large text-xl bold bg-white" style="width: 100%;">Add New Posts...</h1>
+
+<ul role="list" class="divide-y divide-gray-100">
+<br><br/>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button>POST</button>
+    </form>
+
+</ul>
+
+
+
+
+
+
+{% endblock %}
