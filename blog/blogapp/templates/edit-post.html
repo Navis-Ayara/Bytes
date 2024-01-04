@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 <link rel="stylesheet" href="https://cdn.tailwindcss.com">
-{% block title %} Create a Fresh Post {% endblock %}
+{% block title %} Update Post {% endblock %}
 {% block content %}
 
 
@@ -13,13 +13,7 @@
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button>POST</button>
+        <button>Update</button>
     </form>
 </div>
-
-
-
-
-
-
 {% endblock %}

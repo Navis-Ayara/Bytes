@@ -17,6 +17,8 @@
         {{post.date_posted }}
         {{post.author.first_name }}  -{{ post.author.last_name }}<br/>
         {{ post.body }}
+        <br></br>
+        <a href="{% url 'edit-post' post.pk %}">(Edit)</a>
     </li>
  {% endfor %}
 
