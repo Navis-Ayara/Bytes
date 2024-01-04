@@ -38,7 +38,8 @@
 <article>
     <h1>{{post.title}}</h1>
 
-    <small>By: {{post.author}} on {{post.date_posted}}</small><br/>
+    <small>By: {{post.author}} 
+        on {{post.post_date}}</small><br/>
     <hr>
     <p>{{post.body}}</p>
 
@@ -49,6 +50,6 @@
 <a href="{% url 'home' %}">Go Back</a>
 <br></br>
 <a href="{% url 'edit-post' post.pk %}">(Edit)</a>
-
+<a href="{% url 'delete-post' post.pk %}">(DELETE)</a>
 
 {% endblock %}
