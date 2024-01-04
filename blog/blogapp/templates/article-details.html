@@ -47,9 +47,9 @@
     <br/><br/>
 </article>
 
-<a href="{% url 'home' %}">Go Back</a>
+<a href="{% url 'home' %}" class="btn btn-primary btn-lg">Go Back</a>
 <br></br>
-<a href="{% url 'edit-post' post.pk %}">(Edit)</a>
-<a href="{% url 'delete-post' post.pk %}">(DELETE)</a>
+<a href="{% url 'edit-post' post.pk %}" class="btn btn-success">Edit</a>
+<a href="{% url 'delete-post' post.pk %}" class="btn btn-danger">Delete</a></a>
 
 {% endblock %}
