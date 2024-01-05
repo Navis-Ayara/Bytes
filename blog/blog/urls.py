@@ -20,5 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blogapp.urls')),
-    
+    path('bloggets/',include('django.contrib.auth.urls')),
+    path('bloggets/',include ('bloggets.urls')),
 ]
