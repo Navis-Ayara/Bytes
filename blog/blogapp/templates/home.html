@@ -15,8 +15,10 @@
             <small>{{ post.author }} - {{post.date_posted }}</small>
         </div>
         <p class="mb-1">{{ post.body }}</p>
+        {% if user.is_authenticated %}
         <small><a href="{% url 'edit-post' post.pk %}">(Edit)</a></small>
         <br>
+        {% endif %}
     </li>
  {% endfor %}
 

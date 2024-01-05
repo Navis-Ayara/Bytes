@@ -53,8 +53,8 @@
     <a href="{% url 'edit-post' post.pk %}" class="btn btn-success">Edit</a>
     <a href="{% url 'delete-post' post.pk %}" class="btn btn-danger">Delete</a></a>
 {% else %}
- <a href="{% url 'login' %}" class="btn btn-success">Edit</a>
- <a href="{% url 'register' %}" class="btn btn-success">Edit</a>
+ <a href="{% url 'login' %}" class="btn btn-success">login</a>
+ <a href="{% url 'register' %}" class="btn btn-success">register</a>
 {% endif %}
 
 {% endblock %}
