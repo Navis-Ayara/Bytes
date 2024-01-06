@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('blogapp.urls')),
     path('bloggets/',include('django.contrib.auth.urls')),
     path('bloggets/',include ('bloggets.urls')),
+    path('chat/', include('chat.urls')),
 ]
