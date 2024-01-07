@@ -28,3 +28,15 @@ To get started with Bytes, follow these steps:
 git clone https://github.com/Navis-Ayara/Bytes.git
 cd Bytes/blog
 python manage.py runserver
+```
+## Bugs and Issues
+
+- The post form's Author field shows every user in the database
+- Anyone can delete posts
+
+## Contributing
+
+- Just clone or fork the repository
+``` bash
+git clone https://github.com/Navis-Ayara/Bytes.git
+```
