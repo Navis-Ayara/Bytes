@@ -22,14 +22,17 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'home' %}">HOME</a>
+            </li>
+            {% if user.is_authenticated %}
             <li class="nav-item">
               <a class="nav-link" href="{% url 'New_post' %}">NEW POST</a>
             </li>
-            {% if user.is_authenticated %}
-                
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'index' %}">CHAT</a>
+            </li>
             {% else %}
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'registration' %}">Register</a>
+              <a class="nav-link" href="{% url 'register' %}">Register</a>
             {% endif %}
             <li class="nav-item">
               {% if user.is_authenticated %}

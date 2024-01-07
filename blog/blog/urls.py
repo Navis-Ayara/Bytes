@@ -23,8 +23,8 @@ from blogapp.views import logout_view
 
 urlpatterns = [
     path('', include('blogapp.urls')),
-    path('signup/', include('django.contrib.auth.urls')),
-    path('signup/', include('signup.urls')),
-    path("logout/", logout_view, name="logout")
+    path('bloggets/', include('django.contrib.auth.urls')),
+    path('bloggets/', include('bloggets.urls')),
+    path("logout/", logout_view, name="logout"),
+    path('chat/', include('chat.urls')),
 ]
-S

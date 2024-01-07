@@ -23,7 +23,7 @@ class Add_Post(LoginRequiredMixin, CreateView):
     model = Post
     form_class = PostForm
     template_name = 'New_post.html'
-    login_url = "/signup/login"
+    login_url = "bloggets/login"
     success_url = reverse_lazy('home')
 
     def form_valid(self, form):
@@ -35,13 +35,13 @@ class Update_Post(LoginRequiredMixin, UpdateView):
     model = Post
     form_class = EditForm
     template_name = 'edit-post.html'
-    login_url = "/signup/login"
+    login_url = "bloggets/login"
 
 
 class Delete_Post(LoginRequiredMixin, DeleteView):
     model = Post
     template_name = 'delete-post.html'
-    login_url = "/signup/login"
+    login_url = "bloggets/login"
     success_url = reverse_lazy('home')
     redirct_field_name = 'home'
 
